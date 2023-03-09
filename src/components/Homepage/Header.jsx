@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
+import { Dialog } from '@headlessui/react'
 import {  Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Link, NavLink } from 'react-router-dom'
 
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -15,10 +16,10 @@ export default function Example() {
 
         {/* LOGO */}
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <Link to='/' className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
             <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
-          </a>
+          </Link>
         </div>
 
         {/* BOTON MENU */}
@@ -38,9 +39,9 @@ export default function Example() {
           <a href="#" className="text-sm font-semibold leading-6 text-white">Empresas</a>
         {/* CTA */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm font-semibold leading-6 text-white">
+          <NavLink to="/login" className="text-sm font-semibold leading-6 text-white">
             Iniciar Sesión <span aria-hidden="true">&rarr;</span>
-          </a>
+          </NavLink>
         </div>
 
         </div>
@@ -87,7 +88,7 @@ export default function Example() {
                 <a href="#" className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Empresas</a>
               </div>
               <div className="py-6">
-                <a href="#" className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Iniciar Sesión</a>
+                <NavLink to="/login" className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Iniciar Sesión</NavLink>
               </div>
               {/*  */}
             </div>
