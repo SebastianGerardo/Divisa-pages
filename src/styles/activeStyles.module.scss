@@ -1,0 +1,14 @@
+.activeLinks {
+    color: #fff;
+    position: relative;
+}
+
+.activeLinks::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    background: #fff;
+    border-radius: 8px;
+}
