@@ -116,6 +116,23 @@ export const ChangerCoins = () => {
             </AnimatePresence>
           </div>
         </div>
+        <div className="flex items-center justify-center">
+          <motion.button
+          className="font-montserrat bg-[#00e3c2] w-3/5 text-[#060f45] font-bold py-[15px] px-[40] rounded-full mt-4 text-base"
+          whileHover={{ scale: 1.08 }}
+          whileTap={{ scale: 0.7 }}
+          transition={{ duration: 0.3 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          onClick={(e) => e.preventDefault()}
+          >
+            Regístrate ahora!
+          </motion.button>
+        </div>
+
+        <div className="flex justify-center w-full font-montserrat text-[11px] mt-2 ">
+          <p>¿Monto mayor a <b>$10.000</b> o <b>S/ 30.000</b>?</p>
+        </div>
       </div>
     </form>
   );

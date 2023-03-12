@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import {  Bars3Icon  } from '@heroicons/react/24/outline'
 import { Link, NavLink } from 'react-router-dom'
 import { MenuMobile } from './components/MenuMobile'
+import global from './styles/globalStyles.module.scss'
 
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -34,13 +35,13 @@ export default function Example() {
         <div className="hidden lg:flex lg:gap-x-12">
 
         {/* ENLACES */}
-          <a href="#" className="text-sm font-semibold leading-6 text-white">Nosotros</a>
-          <a href="#" className="text-sm font-semibold leading-6 text-white">Blog</a>
-          <a href="#" className="text-sm font-semibold leading-6 text-white">Empresas</a>
+          <NavLink to="/" className={({ isActive }) => isActive ? global.activeLinks : global.deactiveLinks} end>Home</NavLink>
+          <NavLink to="/nosotros" className={({ isActive }) => isActive ? global.activeLinks : global.deactiveLinks}>Nosotros</NavLink>
+          <NavLink to="/blog" className={({ isActive }) => isActive ? global.activeLinks : global.deactiveLinks}>Blog</NavLink>
           
         {/* CTA */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <NavLink to="/login" className="text-sm font-semibold leading-6 text-white">
+          <NavLink to="/login" className={({ isActive }) => isActive ? global.activeLinks : global.deactiveLinks}>
             Iniciar Sesión <span aria-hidden="true">&rarr;</span>
           </NavLink>
         </div>

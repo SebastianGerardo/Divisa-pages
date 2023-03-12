@@ -28,6 +28,7 @@ export const MenuMobile = ({open, setOpen}) => {
               alt=""
             />
           </a>
+
           <button
             type="button"
             className="-m-2.5 rounded-md p-2.5 text-gray-700"
@@ -36,6 +37,7 @@ export const MenuMobile = ({open, setOpen}) => {
             <span className="sr-only">Close menu</span>
             <XMarkIcon className="h-6 w-6" aria-hidden="true" />
           </button>
+
         </div>
 
         {/*  */}
@@ -43,29 +45,33 @@ export const MenuMobile = ({open, setOpen}) => {
           <div className="-my-6 divide-y divide-gray-500/10">
             <div className="space-y-2 py-6">
               {/* ENLACES */}
-              <a
-                href="#"
+              <NavLink
+                to="/"
                 className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                onClick={() => setOpen(false)}
+              >
+                Home
+              </NavLink>
+              <NavLink
+                to="/nosotros"
+                className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                onClick={() => setOpen(false)}
               >
                 Nosotros
-              </a>
-              <a
-                href="#"
+              </NavLink>
+              <NavLink
+                to="/blog"
                 className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                onClick={() => setOpen(false)}
               >
                 Blog
-              </a>
-              <a
-                href="#"
-                className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-              >
-                Empresas
-              </a>
+              </NavLink>
             </div>
             <div className="py-6">
               <NavLink
                 to="/login"
                 className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                onClick={() => setOpen(false)}
               >
                 Iniciar Sesión
               </NavLink>
