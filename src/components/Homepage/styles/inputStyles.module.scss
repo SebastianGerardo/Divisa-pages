@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+
+// SECCIÓN DE CAMBIO DE MONEDA
+
+// INPUTS DE CAMBIO DE MONEDA
+.inputsChangeCoin {
+  width: 16rem;
+  height: 4rem;
+  margin: .2rem 0 .2rem .2rem;
+  padding-left: 1rem;
+  border: 1px solid #fff;
+  border-radius: 8px 0 0 8px;
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.divsChangeSpan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4rem 0 4rem;
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid #fff;
+  border-radius: 0 8px 8px 0;
+  position: relative;
+}
+
+// Boton de cambio de moneda
+
+.buttonChangeCoin {
+    background: white;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: .45rem solid rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 100%;
+    left: 65%;
+    color: black;
+    z-index: 1;
+}
+
+// INPUTS DE CAMBIO DE MONEDA
+
+  // PRIMER INPUT
+
+  .input1 {
+    position: relative;
+  }
+
+  .input1::after {
+    content: "Tú Envías";
+    position: absolute;
+    display: block;
+    font-size: 10px;
+    transform: translate(-50%, -50%);
+    top: 1rem;	
+    left: 2.4rem;
+    color: #081228;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    line-height: 16px;
+    width: 3.5rem;
+  }
+
+  // SEGUNDO INPUT
+
+  .input2{
+    position: relative;
+  }
+
+  .input2::after {
+    content: "Tú Recibes";
+    position: absolute;
+    display: block;
+    font-size: 10px;
+    transform: translate(-50%, -50%);
+    top: 1rem;	
+    width: 3.5rem;
+    left: 2.4rem;
+    color: #081228;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    line-height: 16px;
+  }
